@@ -1,0 +1,68 @@
+/*****************************
+ARTICLE SPECIFICATIONS
+******************************/
+
+#article1 {
+	background-color: orange;
+	font-family: serif;
+	font-size: 1em;
+	color: black;
+	line-height: 12px;
+	padding: 2% 5%;
+	border: dashed;
+	border-radius: 10%;
+}
+
+#article2 {
+	background-color: blue;
+	font-family: sans-serif;
+	font-size: 1.1em;
+	color: yellow;
+	line-height: 15px;
+	padding: 5% 8%;
+	border: dashed;
+	border-radius: 20%;
+}
+
+#article3 {
+	background-color: green;
+	font-family: cursive;
+	font-size: 1.2em;
+	color: blue;
+	line-height: 20px;
+	padding: 3% 9%;
+	border: dashed;
+	border-radius: 30%;
+}
+
+#article4 {
+	background-color: yellow;
+	font-family: initial;
+	font-size: 1.3em;
+	color: red;
+	line-height: 25px;
+	padding: 5% 12%;
+	border: dashed;
+	border-radius: 40%;
+}
+
+#article5 {
+	background-color: red;
+	font-family: monospace;
+	font-size: 1.4em;
+	color: black;
+	line-height: 30px;
+	padding: 12% 15%;
+	border: dashed;
+	border-radius: 50%;
+}
+
+/*****************************
+INPUT BOX'S
+******************************/
+
+.input {
+	display: inline;
+	max-width: 10%;
+	max-height: 25%;
+}
