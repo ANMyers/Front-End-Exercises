@@ -1,0 +1,40 @@
+
+header {
+	border: 1px solid red;
+}
+
+ul {
+	display: inline-block;
+	list-style: none;
+	text-decoration: none;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin: 0 auto;
+	/*background-color: blue;*/
+}
+
+/*COLORS*/
+
+.disabled {
+	color: grey;
+}
+
+.disable a {
+	color: purple;
+}
+
+.active p {
+	color: yellow;
+}
+
+div.red {
+	color: red;
+}
+
+
+div.blue {
+	color: blue;
+}
+

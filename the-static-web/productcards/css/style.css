@@ -1,0 +1,100 @@
+/************************
+GENERAL
+*************************/
+
+body {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+
+
+/************************
+ARTICLES
+*************************/
+
+body article {
+	border: 1px;
+	border-style: dotted;
+	border-color: lightgray;
+	max-width: 30%;
+	float: left;
+	align-self: auto;
+	margin: 1.5%;
+	padding: 0 0px;
+	text-overflow: ;
+}
+
+body article p {
+	margin: 0px;
+}
+
+body article header.title {
+	border: 1px;
+	border-style: dotted;
+	border-color: lightgray;
+}
+
+
+/************************
+SPECIFICATIONS
+*************************/
+
+h2 {                     /*Product Name*/
+	text-align: center;
+	font-size: 1.25em;
+}
+
+.title {
+	max-width: 100%;
+}
+
+.description {
+	padding: 5px;
+	text-align: justify;
+	font-size: 0.8em;
+	margin: 5px 2px;
+}
+
+.availability {
+	margin: 0;
+	width: 100%;
+	background-color: gray;
+	color: yellow;
+	text-align: left;
+}
+
+h4 {					/*Specification*/
+	font-size: 0.75em;
+	margin: 10px 0 0 5px;
+}
+
+.size {
+	font-size: 0.75em;
+	margin: 0 0 0 8px;
+}
+
+.weight {
+	font-size: 0.75em;
+	margin: 0 0 0 8px;
+}
+
+section footer {
+	font-size: 1em;
+	margin: -5% 1px;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 0.95em;
+	margin: 0 2%;
+}
+
+.pricing {
+	font-size: 0.75em;
+	margin: 0 0 0 5%;
+}
