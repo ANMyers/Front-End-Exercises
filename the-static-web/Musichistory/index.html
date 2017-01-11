@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Music History</title>
+	  <link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<section>
+			<nav class="navigation">
+				<ul>
+					<li><a href="#">View Music |</a></li>
+					<li><a href="#">Add Music |</a></li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</nav>
+		</section>
+		<div class="bottom-half">
+			<div class="options">
+				<section class="song-length">
+					<br>
+					<label for="song-length">Song length:</label>
+					<br>
+						<input type="range" name="song-length" min="0:01" max="10:00" step="0:30" value="5:00">
+				</section>
+				<br>
+				<section class="artist">
+					<label for="artist">Artist:</label>
+					<br>
+						<select class="artist-list">
+							<option selected disabled>Options</option>
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+							<option>Four</option>
+						</select>
+				</section>
+				<br>
+				<section class="album">
+					<label for="album">Album:</label>
+					<br>
+						<select class="album-list">
+							<option selected disabled>Options</option>
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+							<option>Four</option>
+						</select>
+				</section>
+				<br>
+				<section class="genre">
+				<label for="genre">Genre:</label>
+				<br>
+					<section id="left-side">
+						<input type="checkbox" name="Genre" value="Rock">Rock
+						<br>
+						<input type="checkbox" name="Genre" value="Pop">Pop
+						<br>
+						<input type="checkbox" name="Genre" value="Blues">Blues
+					</section>
+					<section id="right-side">
+						<input type="checkbox" name="Genre" value="Classical">Classical
+						<br>
+						<input type="checkbox" name="Genre" value="Jazz">Jazz
+						<br>
+						<input type="checkbox" name="Genre" value="Hip-hop">Hip hop
+					</section>
+				</section>
+				<section id="filter">
+					<input type="submit" value="Filter">
+				</section>
+			</div>
+		</div>
+		<div class="song-list">
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+		</div>
+	</body>
+</html>
