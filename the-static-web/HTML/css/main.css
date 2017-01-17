@@ -1,0 +1,191 @@
+/****************
+BODY
+****************/
+
+body {
+	background-color: #dbeaf5;
+	background-image: url("../images/Background-image.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+}
+
+body {
+	min-width: 700px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/****************
+HEADER
+****************/
+
+header h1 {
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+	width: 300px;
+}
+
+
+
+/****************
+NAVIGATION
+****************/
+
+nav a.selected, nav a:hover {
+	color: black;
+}
+
+.navigation {
+	text-align: center;
+	border: 2px solid black;
+}
+
+nav ul {
+	margin: 10px 0 10px 0px;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	padding: 0 5px;
+}
+
+
+
+/****************
+ARTICLE
+****************/
+
+#image img {
+	width: 15%;
+	border-radius: 50%;
+	border: 2px solid #70724f;
+	display: inline-block;
+	margin: 15px 42.5%;
+}
+
+h3 {
+	max-width: 769px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 0 0 15px;
+}
+
+.bio p {
+	max-width: 700px;
+	text-align: justify;
+	margin: 15px auto 50px;
+	padding: 0 50px 0 50px;
+/*	border: 2px solid #70724f;
+*/}
+
+
+/****************
+LINKS
+****************/
+
+#links ul li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#links ul {
+	width: 740px;
+	margin: 20px auto;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#links a {
+	text-decoration: none;
+	color: #fef8e7;
+}
+
+.bar {
+	color: #fef8e7;
+}
+
+
+
+/****************
+FOOTER
+****************/
+
+
+footer ul {
+	padding: 0;
+}
+
+footer ul {
+	max-width: 769px;
+	text-align: center;
+	list-style: none;
+	text-decoration: none;
+	margin: 0 auto;
+}
+
+footer ul li {
+	display: inline-block;
+
+}
+
+footer ul li a {
+	text-decoration: none;
+}
+
+
+
+/****************
+FONT
+****************/
+
+
+
+
+
+/****************
+COLORS
+****************/
+
+nav {
+	background-color: #1484c8;
+}
+
+header {
+	background-color: #1071a8;
+}
+
+header h1 {
+	color: #5bbaf1;
+}
+
+h3 {
+	background-color: rgba(219, 234, 245, 0.3);
+	color: #fef8e7;
+}
+
+
+article p {
+	background-color: rgba(219, 234, 245, 0.3);
+	color: #fef8e7;
+}
+
+footer ul {
+	background-color: rgba(219, 234, 245, 0.3);
+}
+
+
+
+
+
