@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temp Converter Exercise</title>
+</head>
+<body>
+
+	<label>
+		<br>
+		Temperature to Convert
+		<br>
+		<br>
+		<input type="text" id="degreesToConvert" placeholder="Degrees">
+	<form>
+		<br>
+		<input type="radio" id="Celsius" name="degrees" value="Celsius">Celsius
+		<br>
+		<input type="radio" name="degrees" id="Fahrenheit" value="Fahrenheit">Fahrenheit
+	</form>
+		<br>
+		<button type="button" id="submit-button">
+			Convert
+		</button>
+		<br>
+		<br>
+		<button type="button" id="clear-button">
+			Clear Input
+		</button>
+		<p>
+		</p>
+	</label>
+
+	<article>
+		<output id="convertedDegrees">
+			->Converted Degrees<-
+		</output>
+	</article>
+
+	<script type="text/javascript" src="converter.js">
+	</script>
+</body>
+</html>
