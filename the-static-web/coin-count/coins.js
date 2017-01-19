@@ -16,7 +16,7 @@ function coinCounter () {
 	coinPurse.nickels = 0;
 	coinPurse.pennies = 0;
 
-	initialValue = initialValue * 100;
+	initialValue = Math.round(initialValue * 100);
 
 	var quarterCheck = Math.floor(initialValue / 25);
 	coinPurse.quarters = quarterCheck;
