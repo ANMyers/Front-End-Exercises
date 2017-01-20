@@ -108,6 +108,7 @@ SONG LIST
 	float: right;
 	display: block;
 	margin-top: 2%;
+	overflow: scroll;
 }
 
 .song-list h2 {
