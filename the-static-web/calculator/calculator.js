@@ -6,22 +6,27 @@ var divideButton = document.getElementById("divide-button");
 var repeatButton = document.getElementById("repeat");
 var lastAnswer;
 
+function handOff(unicorn, daises, butterflies) {
+	var pleaseReturn = butterflies(unicorn, daises)
+	return pleaseReturn;
+}
+
 function inBetweenFunction () {
 	var output = document.getElementById("output-answer");
 	var firstNumber = Number(document.getElementById("input-firstValue").value);
 	var secondNumber = Number(document.getElementById("input-secondValue").value);
 
 	if (event.target.id === "add-button") {
-		var outputMe = addMe(firstNumber, secondNumber);
+		var outputMe = handOff(firstNumber, secondNumber, addMe);
 		lastAnswer = outputMe;
 	} else if (event.target.id === "subtract-button") {
-		var outputMe = subtractMe(firstNumber, secondNumber);
+		var outputMe = handOff(firstNumber, secondNumber, subtractMe);
 		lastAnswer = outputMe;
 	} else if (event.target.id === "multiply-button") {
-		var outputMe = multiplyMe(firstNumber, secondNumber);
+		var outputMe = handOff(firstNumber, secondNumber, multiplyMe);
 		lastAnswer = outputMe;
 	} else if (event.target.id === "divide-button") {
-		var outputMe = divideMe(firstNumber, secondNumber);
+		var outputMe = handOff(firstNumber, secondNumber, divideMe);
 		lastAnswer = outputMe;
 	}
 
@@ -39,7 +44,7 @@ function inBetweenFunction () {
 
 function addMe (potato, tomato) {
 	if (repeatButton.checked === true) {
-		var repeated = lastAnswer + tomato;
+		var repeated =  lastAnswer + tomato;
 		return repeated;
 	} else {
 		var answer = potato + tomato;
