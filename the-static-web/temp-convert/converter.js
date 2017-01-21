@@ -46,6 +46,8 @@ function CeltoFahrenheit (potato) {
 	outputDegrees.innerHTML = celsiusTempConverted;
 	colorCelsius();
 
+	
+
 }
 
 function FahtoCelsius (potato) {
