@@ -3,6 +3,8 @@ var addButton = document.getElementById("add-button");
 var subtractButton = document.getElementById("subtract-button");
 var multiplyButton = document.getElementById("multiply-button");
 var divideButton = document.getElementById("divide-button");
+var repeatButton = document.getElementById("repeat");
+var lastAnswer;
 
 function inBetweenFunction () {
 	var output = document.getElementById("output-answer");
@@ -11,12 +13,16 @@ function inBetweenFunction () {
 
 	if (event.target.id === "add-button") {
 		var outputMe = addMe(firstNumber, secondNumber);
+		lastAnswer = outputMe;
 	} else if (event.target.id === "subtract-button") {
 		var outputMe = subtractMe(firstNumber, secondNumber);
+		lastAnswer = outputMe;
 	} else if (event.target.id === "multiply-button") {
 		var outputMe = multiplyMe(firstNumber, secondNumber);
+		lastAnswer = outputMe;
 	} else if (event.target.id === "divide-button") {
 		var outputMe = divideMe(firstNumber, secondNumber);
+		lastAnswer = outputMe;
 	}
 
 	var removeLastFromMe = document.getElementsByTagName("p");
@@ -29,31 +35,56 @@ function inBetweenFunction () {
 	outputField.appendChild(outputText);
 	output.appendChild(outputField);
 
-	console.log(removeLastFromMe);
-
 }
 
 function addMe (potato, tomato) {
-	var answer = potato + tomato;
-	return answer;
+	if (repeatButton.checked === true) {
+		var repeated = lastAnswer + tomato;
+		return repeated;
+	} else {
+		var answer = potato + tomato;
+		return answer;
+	}
 }
 
 function subtractMe (onion, burrito) {
-	var answer = onion - burrito;
-	return answer;
+	if (repeatButton.checked === true) {
+		var repeated = lastAnswer - burrito;
+		return repeated;
+	} else {
+		var answer = onion - burrito;
+		return answer;
+	}
 }
 
 function multiplyMe (taco, hamburger) {
-	var answer = taco * hamburger;
-	return answer;
+	if (repeatButton.checked === true) {
+		var repeated = lastAnswer * hamburger;
+		return repeated;
+	} else {
+		var answer = taco * hamburger;
+		return answer;
+	}
 }
 
 function divideMe (tv, laptop) {
-	var answer = tv / laptop;
-	return answer;
+	if (repeatButton.checked === true) {
+		var repeated = lastAnswer / laptop;
+		return repeated;
+	} else {
+		var answer = tv / laptop;
+		return answer;
+	}
 }
 
 addButton.addEventListener('click', inBetweenFunction);
 subtractButton.addEventListener('click', inBetweenFunction);
 multiplyButton.addEventListener('click', inBetweenFunction);
 divideButton.addEventListener('click', inBetweenFunction);
+
+////////////  Testing Three Parameters ////////////////////
+
+
+
+
+
