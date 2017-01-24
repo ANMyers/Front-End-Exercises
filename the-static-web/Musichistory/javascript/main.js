@@ -157,13 +157,6 @@ function removeSong() {
 	var songEndPoint = idOfTarget.indexOf("-");
 	var songName = idOfTarget.substring(0, songEndPoint - 1);
 
-	var artistStartPoint = idOfTarget.indexOf("by ")
-	var artistEndPoint = idOfTarget.indexOf(" on");
-	var artistName = idOfTarget.substring(artistStartPoint + 3, artistEndPoint);
-
-	var albumStartPoint = idOfTarget.indexOf("album")
-	var albumName = idOfTarget.substr(albumStartPoint + 6);
-
 	for (var i = 0; i < pulledSongName.length; i++) {
 		if (songName === pulledSongName[i]) {
 			pulledSongName.splice(i, 1);
