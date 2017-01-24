@@ -74,6 +74,7 @@ function addMusicScreen () {
 	optionsList.className = "options invisible";
 	songListDiv.className = "song-list invisible";
 	buttonsList.classList.remove("invisible");
+	moreButton.className = "invisible";
 	return;
 };
 
@@ -81,6 +82,7 @@ function listMusicScreen () {
 	optionsList.classList.remove("invisible");
 	songListDiv.classList.remove("invisible");
 	buttonsList.className = "buttons invisible";
+	moreButton.classList.remove("invisible");
 	document.getElementById("response").innerHTML = "";
 	return;
 };
