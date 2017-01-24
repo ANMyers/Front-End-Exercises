@@ -230,7 +230,8 @@ function keepGoing () {
 
 function putMoreInSameArrays (potatos) {
 	for (var i = 0; i < potatos.length; i++) {
-	songs.push(potatos[i].song)
+	songs.push(potatos[i].song);
+	genres.push(potatos[i].genre);
 	}
 	BeginingOfTheEnd();
 }
