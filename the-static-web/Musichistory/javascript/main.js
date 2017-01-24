@@ -1,18 +1,21 @@
 var addButton = document.getElementById("add-song-button");
 var listMusic = document.getElementById("list-music");
 var addMusic = document.getElementById("add-music");
-
+var moreButton = document.getElementById("more-button");
 
 var buttonsList = document.getElementById("buttons-list");
 var songListDiv = document.getElementById("song-list-div");
 var optionsList = document.getElementById("options-list");
 
+var counter = 0;
+
 var songs = [];
-songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+///////////// PULLING THESE FROM JSON (AND IT WORKS! :)
+//songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
+//songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
+//songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
+//songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
+//songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
 var genres = [];
 genres[genres.length] = "Rock and Roll"
@@ -29,36 +32,42 @@ var pulledArtistName = [];
 var pulledAlbumName = [];
 
 
-//////////////// Loop for removing/replacing wrong characters ///////////////////
-for (i = 0; i < songs.length; i++) {
-	currentSongArray = songs[i]
-	var replacedSongArray = currentSongArray.replace(/\*|!|@|\(|/g, "");
-	var finalArray = replacedSongArray.replace(/\>/g, '-');
-	songs[i] = finalArray;
-}
+function BeginingOfTheEnd () {
 
-/////////////// Adding songs to front and back of array //////////////////
-songs.push("As - by Stevie Wonder on the album Song in the key of life");
-songs.unshift("Brown Sugar - by Rolling Stones on the album Sticky Fingers");
+	if (counter === 0) {
+		/////////////// Adding songs to front and back of array //////////////////
+		songs.push("As - by Stevie Wonder on the album Song in the key of life");
+		songs.unshift("Brown Sugar - by Rolling Stones on the album Sticky Fingers");
+		counter++;
+	}
 
+	//////////////// Loop for removing/replacing wrong characters ///////////////////
+	for (i = 0; i < songs.length; i++) {
+		currentSongArray = songs[i]
+		var replacedSongArray = currentSongArray.replace(/\*|!|@|\(|/g, "");
+		var finalArray = replacedSongArray.replace(/\>/g, '-');
+		songs[i] = finalArray;
+	}
 
-for (i = 0; i < songs.length; i++) {
-/////////////// Finding index to pull song names ///////////////
-	var songEndPoint = songs[i].indexOf("-");
-	var songName = songs[i].substring(0, songEndPoint - 1);
-	pulledSongName[i] = songName;
+	for (i = 0; i < songs.length; i++) {
+	/////////////// Finding index to pull song names ///////////////
+		var songEndPoint = songs[i].indexOf("-");
+		var songName = songs[i].substring(0, songEndPoint - 1);
+		pulledSongName[i] = songName;
 
-/////////////// Finding index to pull artist names ///////////////
-	var artistStartPoint = songs[i].indexOf("by ")
-	var artistEndPoint = songs[i].indexOf(" on");
-	var artistName = songs[i].substring(artistStartPoint + 3, artistEndPoint);
-	pulledArtistName[i] = artistName;
+	/////////////// Finding index to pull artist names ///////////////
+		var artistStartPoint = songs[i].indexOf("by ")
+		var artistEndPoint = songs[i].indexOf(" on");
+		var artistName = songs[i].substring(artistStartPoint + 3, artistEndPoint);
+		pulledArtistName[i] = artistName;
 
-/////////////// Finding index to pull album names ///////////////
-	var albumStartPoint = songs[i].indexOf("album")
-	var albumName = songs[i].substr(albumStartPoint + 6);
-	pulledAlbumName[i] = albumName;
+	/////////////// Finding index to pull album names ///////////////
+		var albumStartPoint = songs[i].indexOf("album")
+		var albumName = songs[i].substr(albumStartPoint + 6);
+		pulledAlbumName[i] = albumName;
 
+	}
+	createFrameWork();
 }
 
 function addMusicScreen () {
@@ -156,11 +165,66 @@ function clearInputs() {
 
 }
 
-createFrameWork();
-
 addButton.addEventListener('click', addSong);
 addMusic.addEventListener('click', addMusicScreen);
 listMusic.addEventListener('click', listMusicScreen);
+moreButton.addEventListener('click', lordHaveMercy);
+
+
+/////////////// TESTS FOR XHR FUNCTIONALITY ////////////
+
+/////////// PART ONE OF EXERCISE ////////////
+var XHRpractice = new XMLHttpRequest();
+XHRpractice.addEventListener('load', nextStep);
+XHRpractice.addEventListener('error', fkme);
+
+function fkme (NoFun) {
+	console.log("Back to the drawing board");
+}
+
+function nextStep (DamnRight) {
+	var listOSongs = JSON.parse(event.target.responseText);
+	putEmInArray(listOSongs);
+}
+
+function putEmInArray(AlmostThere) {
+	for (var i = 0; i < AlmostThere.length; i++) {
+		songs[i] = AlmostThere[i].song;
+	}
+	BeginingOfTheEnd();
+}
+
+XHRpractice.open("GET", "songs1.json");
+XHRpractice.send();    ///// IMPORTANT STEP :)
+
+////////// PART TWO OF EXERCISE //////////// 
+
+function lordHaveMercy () {
+	var PartTwo = new XMLHttpRequest();
+	PartTwo.addEventListener('load', keepGoing);
+	PartTwo.addEventListener('error', fkme);
+
+	PartTwo.open("GET", "songs2.json");
+	PartTwo.send();    ///// IMPORTANT STEP :)
+
+}
+
+function keepGoing () {
+	var listOMoreSongs = JSON.parse(event.target.responseText);
+	putMoreInSameArrays(listOMoreSongs);
+}
+
+function putMoreInSameArrays (potatos) {
+	for (var i = 0; i < potatos.length; i++) {
+	songs.push(potatos[i].song)
+	}
+	BeginingOfTheEnd();
+}
+
+
+
+
+
 
 
 
