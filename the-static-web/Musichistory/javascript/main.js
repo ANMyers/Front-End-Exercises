@@ -1,6 +1,11 @@
-var mercyButton = document.getElementById("mercy-button");
 var addButton = document.getElementById("add-song-button");
-var removeButton = document.getElementById("remove-song-button");
+var listMusic = document.getElementById("list-music");
+var addMusic = document.getElementById("add-music");
+
+
+var buttonsList = document.getElementById("buttons-list");
+var songListDiv = document.getElementById("song-list-div");
+var optionsList = document.getElementById("options-list");
 
 var songs = [];
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -56,25 +61,51 @@ for (i = 0; i < songs.length; i++) {
 
 }
 
+function addMusicScreen () {
+	optionsList.className = "options invisible";
+	songListDiv.className = "song-list invisible";
+	buttonsList.classList.remove("invisible");
+	return;
+};
 
+function listMusicScreen () {
+	optionsList.classList.remove("invisible");
+	songListDiv.classList.remove("invisible");
+	buttonsList.className = "buttons invisible";
+	document.getElementById("response").innerHTML = "";
+	return;
+};
 
 function createFrameWork() {
-	var Joined = [];
+	songListDiv.innerHTML = "";
 	for (i = 0; i < pulledSongName.length; i++) {
-
-		var list = `<h2>${pulledSongName[i]}</h2>
+		var buttonId = [i];
+		var list = `<div>
+					<h2>${pulledSongName[i]}</h2>
+					<button type="button" class="floatPlz" id="${buttonId}">Delete</button>
 						<ol>
 							<li>${pulledArtistName[i]}</li>
 							<li>|</li>
 							<li>${pulledAlbumName[i]}</li>
 							<li>|</li>
 							<li>${genres[i]}</li>
-						</ol>`
+						</ol>
+					</div>`
 
-		Joined[i] = list;
+		document.getElementById("song-list-div").innerHTML += list;
 	}
-	var finished = Joined.join("");
-	document.getElementById("song-list-div").innerHTML = finished;
+	addListener();
+}
+
+function addListener () {
+
+	var listOfButtons = document.getElementsByClassName("floatPlz");
+
+	for (var i = 0; i < listOfButtons.length; i++) {
+		listOfButtons[i].addEventListener('click', function() {
+			removeSong();
+		});
+	}
 }
 
 function addSong () {
@@ -104,17 +135,17 @@ function addSong () {
 	pulledAlbumName.push(albumInput);
 	genres.push(genreInput);
 	clearInputs();
-	pleaseConfirm.innerHTML = "Click 'Review Songs' to add your song to the list.";
+	createFrameWork();
+	pleaseConfirm.innerHTML = 'Your song has been added, click "List Music" to see.';
 }
 
 function removeSong() {
-	var pleaseConfirm = document.getElementById("response");
-	pulledSongName.pop();
-	pulledArtistName.pop();
-	pulledAlbumName.pop();
-	genres.pop();
-	createFrameWork();
-	pleaseConfirm.innerHTML = "The last song has been removed."
+	var targetId = Number(event.target.id);
+	event.target.parentNode.remove();
+	pulledSongName.splice(targetId, 1);
+	pulledArtistName.splice(targetId, 1);
+	pulledAlbumName.splice(targetId, 1);
+	genres.splice(targetId, 1);
 }
 
 function clearInputs() {
@@ -125,9 +156,11 @@ function clearInputs() {
 
 }
 
-mercyButton.addEventListener('click', createFrameWork);
+createFrameWork();
+
 addButton.addEventListener('click', addSong);
-removeButton.addEventListener('click', removeSong);
+addMusic.addEventListener('click', addMusicScreen);
+listMusic.addEventListener('click', listMusicScreen);
 
 
 

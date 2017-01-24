@@ -11,14 +11,14 @@
 		<section>
 			<nav class="navigation">
 				<ul>
-					<li><a href="#">View Music |</a></li>
-					<li><a href="#">Add Music |</a></li>
+					<li id="list-music"><a href="#">List Music |</a></li>
+					<li id="add-music"><a href="#">Add Music |</a></li>
 					<li><a href="#">Profile</a></li>
 				</ul>
 			</nav>
 		</section>
 		<div class="bottom-half">
-			<div class="options">
+			<div class="options" id="options-list">
 				<section class="song-length">
 					<br>
 					<label for="song-length">Song length:</label>
@@ -99,11 +99,13 @@
 					<li>Genre</li>
 				</ol>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<div class="buttons">
-			<button type="button" id="mercy-button">
-			Review Songs
+		<div id="more-button-div">
+		<button type="button" id="more-button">
+			More >
 			</button>
+		</div>
+
+		<div class="buttons invisible" id="buttons-list">
 		<br><br>
 			<button type="button" id="add-song-button">
 			Add Your Song
@@ -116,10 +118,6 @@
 			<input type="text" id="add-album" placeholder="Song's Album">
 		<br><br>
 			<input type="text" id="add-genre" placeholder="Song's Genre">
-		<br><br>
-			<button type="button" id="remove-song-button">
-			Remove Last Song
-			</button>
 		<br>
 			<p id="response"><p>
 		</div>
