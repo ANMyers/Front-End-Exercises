@@ -38,7 +38,6 @@ function BeginingOfTheEnd () {
 		/////////////// Adding songs to front and back of array //////////////////
 		songs.push("As - by Stevie Wonder on the album Song in the key of life");
 		songs.unshift("Brown Sugar - by Rolling Stones on the album Sticky Fingers");
-		counter++;
 	}
 
 	//////////////// Loop for removing/replacing wrong characters ///////////////////
@@ -47,7 +46,7 @@ function BeginingOfTheEnd () {
 		var replacedSongArray = currentSongArray.replace(/\*|!|@|\(|/g, "");
 		var finalArray = replacedSongArray.replace(/\>/g, '-');
 		songs[i] = finalArray;
-	}
+		}
 
 	for (i = 0; i < songs.length; i++) {
 	/////////////// Finding index to pull song names ///////////////
@@ -65,8 +64,9 @@ function BeginingOfTheEnd () {
 		var albumStartPoint = songs[i].indexOf("album")
 		var albumName = songs[i].substr(albumStartPoint + 6);
 		pulledAlbumName[i] = albumName;
+		}
 
-	}
+	counter++;
 	createFrameWork();
 }
 
@@ -91,7 +91,7 @@ function createFrameWork() {
 		var buttonId = [i];
 		var list = `<div>
 					<h2>${pulledSongName[i]}</h2>
-					<button type="button" class="floatPlz" id="${buttonId}">Delete</button>
+					<button type="button" class="floatPlz" id="${pulledSongName[i]} - by ${pulledArtistName[i]} on the album ${pulledAlbumName[i]}">Delete</button>
 						<ol>
 							<li>${pulledArtistName[i]}</li>
 							<li>|</li>
@@ -146,15 +146,34 @@ function addSong () {
 	clearInputs();
 	createFrameWork();
 	pleaseConfirm.innerHTML = 'Your song has been added, click "List Music" to see.';
+
+	songs.push(`${songInput} - by ${artistInput} on the album ${albumInput}`);
 }
 
 function removeSong() {
-	var targetId = Number(event.target.id);
-	event.target.parentNode.remove();
-	pulledSongName.splice(targetId, 1);
-	pulledArtistName.splice(targetId, 1);
-	pulledAlbumName.splice(targetId, 1);
-	genres.splice(targetId, 1);
+
+	var idOfTarget = event.target.id;
+
+	var songEndPoint = idOfTarget.indexOf("-");
+	var songName = idOfTarget.substring(0, songEndPoint - 1);
+
+	var artistStartPoint = idOfTarget.indexOf("by ")
+	var artistEndPoint = idOfTarget.indexOf(" on");
+	var artistName = idOfTarget.substring(artistStartPoint + 3, artistEndPoint);
+
+	var albumStartPoint = idOfTarget.indexOf("album")
+	var albumName = idOfTarget.substr(albumStartPoint + 6);
+
+	for (var i = 0; i < pulledSongName.length; i++) {
+		if (songName === pulledSongName[i]) {
+			pulledSongName.splice(i, 1);
+			pulledArtistName.splice(i, 1);
+			pulledAlbumName.splice(i, 1);
+			genres.splice(i, 1);
+			songs.splice(i, 1);
+		} 
+	}
+	event.target.parentNode.remove();		
 }
 
 function clearInputs() {
