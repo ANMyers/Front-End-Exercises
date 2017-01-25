@@ -3,18 +3,25 @@
 <head>
 	<title>IIFE, XHRs, Callbacks, Oh My</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
 </head>
 <body>
-	<div id="herbivores">
-		<h3>List O Herbivores</h3>
-		<ol id="herb-list">
-		</ol>
-	</div>
-<br>
-	<div id="carnivores">
-		<h3>List O Carnivores</h3>
-		<ol id="carn-list">
-		</ol>
+	<div class="row">
+		<div class="col s5 card-panel offset-s1 z-depth-5 teal lighten-3" id="herbivores">
+			<h3>List O Herbivores</h3>
+			<ol id="herb-list">
+			</ol>
+		</div>
+		<div class="col s5 card-panel z-depth-5 cyan lighten-3" id="carnivores">
+			<h3>List O Carnivores</h3>
+			<ol id="carn-list">
+			</ol>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="javascript/Predator.js"></script>
