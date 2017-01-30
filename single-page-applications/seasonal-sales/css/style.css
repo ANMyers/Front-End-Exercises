@@ -1,0 +1,11 @@
+#list-of-items li {
+	list-style: none;
+}
+
+.product {
+	color: orange;
+}
+
+.price {
+	color: yellow;
+}
