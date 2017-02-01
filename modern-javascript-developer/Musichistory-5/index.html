@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Music History</title>
+	  <link rel="stylesheet" href="css/style.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+
+		<section>
+			<nav class="navigation">
+				<ul>
+					<li id="list-music"><a href="#">List Music |</a></li>
+					<li id="add-music"><a href="#">Add Music |</a></li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</nav>
+		</section>
+		<div class="bottom-half">
+			<div class="options" id="options-list">
+				<section class="song-length">
+					<br>
+					<label for="song-length">Song length:</label>
+					<br>
+						<input type="range" name="song-length" min="0:01" max="10:00" step="0:30" value="5:00">
+				</section>
+				<br>
+				<section class="artist">
+					<label for="artist">Artist:</label>
+					<br>
+						<select class="artist-list">
+							<option selected disabled>Options</option>
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+							<option>Four</option>
+						</select>
+				</section>
+				<br>
+				<section class="album">
+					<label for="album">Album:</label>
+					<br>
+						<select class="album-list">
+							<option selected disabled>Options</option>
+							<option>One</option>
+							<option>Two</option>
+							<option>Three</option>
+							<option>Four</option>
+						</select>
+				</section>
+				<br>
+				<section class="genre">
+				<label for="genre">Genre:</label>
+				<br>
+					<section id="left-side">
+						<input type="checkbox" name="Genre" value="Rock">Rock
+						<br>
+						<input type="checkbox" name="Genre" value="Pop">Pop
+						<br>
+						<input type="checkbox" name="Genre" value="Blues">Blues
+					</section>
+					<section id="right-side">
+						<input type="checkbox" name="Genre" value="Classical">Classical
+						<br>
+						<input type="checkbox" name="Genre" value="Jazz">Jazz
+						<br>
+						<input type="checkbox" name="Genre" value="Hip-hop">Hip hop
+					</section>
+				</section>
+				<section id="filter">
+					<input type="button" value="Filter">
+				</section>
+			</div>
+		</div>
+		<div class="song-list" id="song-list-div">
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+			<h2>Song Name</h2>
+				<ol>
+					<li>Artist name</li>
+					<li>|</li>
+					<li>Album name</li>
+					<li>|</li>
+					<li>Genre</li>
+				</ol>
+		</div>
+		<div id="more-button-div">
+		<button type="button" id="more-button">
+			More >
+			</button>
+		</div>
+
+		<div class="buttons invisible" id="buttons-list">
+		<br><br>
+			<button type="button" id="add-song-button">
+			Add Your Song
+			</button>
+		<br><br>
+			<input type="text" id="add-song" placeholder="Song's Name">
+		<br><br>
+			<input type="text" id="add-artist" placeholder="Song's Artist">
+		<br><br>
+			<input type="text" id="add-album" placeholder="Song's Album">
+		<br><br>
+			<input type="text" id="add-genre" placeholder="Song's Genre">
+		<br>
+			<p id="response"><p>
+		</div>
+
+	<script type="text/javascript" src="javascript/main.js"></script>
+	</body>
+</html>
