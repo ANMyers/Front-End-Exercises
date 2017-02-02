@@ -1,0 +1,13 @@
+div {
+	width: 125px;
+	height: 75px;
+}
+
+div ul {
+	margin: 0;
+	padding: 0;
+}
+
+div ul li {
+	list-style: none;
+}
