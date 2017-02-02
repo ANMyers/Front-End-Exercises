@@ -1,5 +1,7 @@
 body {
 	background-color: rgba(0, 48, 61, 1);
+	position: relative;
+	z-index: -2;
 }
 
 h2 {
@@ -12,50 +14,56 @@ h2 {
 #NASA-image {
 	height: 600px;
 	width: 900px;
-	z-index: -1;
-	position: relative;
 	border-radius: 20px;
 	border: 3px solid black;
 }
 
 #NASA-image-div {
+	z-index: -1;
+	position: relative;
 	margin: 0 auto;
 	margin-top: 1%;
 	height: 600px;
 	width: 900px;
-	z-index: -1;
-	position: relative;
 }
 
 #description-div {
-	height: 150px;
-	width: 875px;
+	height: 100px;
+	width: 900px;
 	color: orange;
 	margin: 0 auto;
-}
+	margin-top: -200px;
+	overflow: scroll;
+	}
 
 #explanation {
-	overflow: scroll;
-	height: 150px;
-	width: 100%;
+	padding: 8px;
+	margin: 0 auto;
+	width: 875px;
 	text-align: justify;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 20px;
+	z-index: 1;
+	position: relative;
 }
 
 #buttons {
-	margin: 1% auto;
+	margin: 10px auto;
 	height: 18px;
 	width: 900px;
 }
 
 #middle-button {
+	margin-top: -100px;
 	text-align: center;
 	height: 18px;
 	width: 900px;
 	margin: 0 auto;
-	margin-top: -28px;
 }
 
 #pause-button {
+	margin-left: 0px;
 	width: 100px;
 	height: 18px;
 }
@@ -77,16 +85,47 @@ h2 {
 }
 
 #previous-button {
+	font-size: 2em;
 	float: left;
+	margin-top: -320px;
 	margin-left: 5px;
+	height: 60px;
+	width: 60px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	pointer-events: inherit;
+}
+
+#previous-button p {
+	margin-top: 10px;
 }
 
 #next-button {
+	font-size: 2em;
 	float: right;
+	margin-top: -320px;
+	height: 60px;
+	width: 60px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	pointer-events: inherit;
+}
+
+#next-button p {
+	margin-top: 10px;
+	pointer-events: none;
+}
+
+#previous-button p {
+	pointer-events: none;
 }
 
 #center-me {
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	position: relative;
+	z-index: -2;
 }

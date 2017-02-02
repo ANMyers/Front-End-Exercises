@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
 	
-	$("#NASA-image2").hide();
+	$("#description-div").hide();
 	// Global variables of details of last request
 	var nasaTitle;
 	var nasaDate;
@@ -39,7 +39,7 @@ $(document).ready(() => {
  	function helloNASA () {
  		var dateToNASA = giveRandomDate();
 		var nasaImagesRequest = $.ajax({
-	    url: "https://api.nasa.gov/planetary/apod",
+	    url: "https://api.nasa.gov/planetary/apod?api_key=hLasRyvCuDQD85ink26Ekmgb6F9IdaQtAZwmWxPa",
 	    type: 'GET',
 	    data: jQuery.param({ 
 	 					 date: dateToNASA
@@ -78,7 +78,7 @@ $(document).ready(() => {
 	// populates the page
 	function thisIsTheLoopThatNeverEnds(prayForMe) {
 		  // yesItGoesOnAndOnMyFriends haha
-		$("#NASA-image").hide("slow");
+		$("#NASA-image").hide();
 		$("#NASA-image").attr("src", nasaImageUrl);
 		$("#caption").empty();
 		$("#year").empty();
@@ -125,23 +125,48 @@ $(document).ready(() => {
 		clearTimeout(myTimeout);
 	});
 
+	$("#next-button").hover(function(){
+		
+	});
+
+	$("#previous-button").hover(function(){
+		
+	});
+
+	$("#NASA-image").hover(function(){
+        $("#description-div").show();
+        }, function(){
+        console.log("left the image box");
+	});
+
+	$("#center-me").hover(function() {
+		$("#description-div").hide();
+	});
+
+	 // $("p").hover(function(){
+  //       $(this).css("background-color", "yellow");
+  //       }, function(){
+  //       $(this).css("background-color", "pink");
+  //   });
+
 helloNASA();
 });
 
 
 // var planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+// var planetEs = [];
 
 // var letterE = planets.filter(function(planet){
-// 	var addToEArray = filterme(planet);
-// 	console.log("letterE Array ", letterE);
+// 	var addToEArray = filterMe(planet);
+// 	console.log("letterE Array ", planetEs);
 //   	return;
 // });
 
-// function filterme (eachplanet) {
+// function filterMe (eachplanet) {
 // 	var arrayOfLetters = eachplanet.split("");
-// 	var pushMe = arrayOfLetters.indexOf("e");
-// 	if (pushMe !== -1) {
-// 		letterE.push(eachplanet);
+// 	var doIHaveAnE = arrayOfLetters.indexOf("e");
+// 	if (doIHaveAnE !== -1) {
+// 		planetEs.push(eachplanet);
 // 	}
 // }
 
