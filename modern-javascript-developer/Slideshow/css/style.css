@@ -1,0 +1,91 @@
+body {
+	background-color: rgba(0, 48, 61, 1);
+}
+
+h2 {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#NASA-image {
+	height: 600px;
+	width: 900px;
+	z-index: -1;
+	position: relative;
+	border-radius: 20px;
+	border: 3px solid black;
+}
+
+#NASA-image-div {
+	margin: 0 auto;
+	margin-top: 1%;
+	height: 600px;
+	width: 900px;
+	z-index: -1;
+	position: relative;
+}
+
+#description-div {
+	height: 150px;
+	width: 875px;
+	color: orange;
+	margin: 0 auto;
+}
+
+#explanation {
+	overflow: scroll;
+	height: 150px;
+	width: 100%;
+	text-align: justify;
+}
+
+#buttons {
+	margin: 1% auto;
+	height: 18px;
+	width: 900px;
+}
+
+#middle-button {
+	text-align: center;
+	height: 18px;
+	width: 900px;
+	margin-top: -28px;
+}
+
+#pause-button {
+	width: 100px;
+	height: 18px;
+}
+
+#caption {
+	float: left;
+	color: white;
+	margin-top: -40px;
+	margin-left: 10px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#year {
+	float: right;
+	color: white;
+	margin-top: -40px;
+	margin-right: 10px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#previous-button {
+	float: left;
+	margin-left: 5px;
+}
+
+#next-button {
+	float: right;
+}
+
+#center-me {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
