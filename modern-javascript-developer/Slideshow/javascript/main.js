@@ -65,6 +65,7 @@ $(document).ready(() => {
 		keepValues(nasaToObject);
 	};
 
+	// Storing the values to populate the page
 	function keepValues(derp) {
 		nasaImageHdUrl = derp.hdurl;
 		nasaImageUrl = derp.url;
@@ -74,7 +75,7 @@ $(document).ready(() => {
 		thisIsTheLoopThatNeverEnds();
 	}
 
-	// 
+	// populates the page
 	function thisIsTheLoopThatNeverEnds(prayForMe) {
 		  // yesItGoesOnAndOnMyFriends haha
 		$("#NASA-image").hide("slow");
@@ -92,6 +93,7 @@ $(document).ready(() => {
 		}, 15000);
 	}
 
+	// Stores request in array of objects for previous button
 	function storeLast(derp2) {
 		var objToKeep = {}
 		objToKeep.hdurl = derp2.hdurl;
@@ -121,9 +123,6 @@ $(document).ready(() => {
 	$("#pause-button").on('click', function() {
 		clearTimeout(myTimeout);
 	});
-
-// setTimeout(function(){ alert("Hello"); }, 3000);
-// $("#my_image").attr("src","second.jpg");
 
 helloNASA();
 });
