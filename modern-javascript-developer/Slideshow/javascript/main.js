@@ -39,7 +39,7 @@ $(document).ready(() => {
  	function helloNASA () {
  		var dateToNASA = giveRandomDate();
 		var nasaImagesRequest = $.ajax({
-	    url: "https://api.nasa.gov/planetary/apod?api_key=hLasRyvCuDQD85ink26Ekmgb6F9IdaQtAZwmWxPa",
+	    url: "https://api.nasa.gov/planetary/apod",
 	    type: 'GET',
 	    data: jQuery.param({ 
 	 					 date: dateToNASA
