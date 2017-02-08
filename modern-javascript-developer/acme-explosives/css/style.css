@@ -1,0 +1,28 @@
+#myBtn {
+	width: 125px;
+	margin: 0 auto;
+}
+
+.fill-me {
+	border: 2px solid black;
+	margin-top: 10px;
+}
+
+#category-pick {
+	background-color: lightblue;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.list-of-products li {
+	list-style: none;
+}
+
+.name {
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 0;
+}

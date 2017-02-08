@@ -1,0 +1,40 @@
+{
+    "types": [
+        {
+        	"id": 1,
+            "category": 0,
+            "name": "Industrial",
+            "description": "Fireworks intended for a large scale fireworks display perhaps for a concert or event"
+        },
+        {
+        	"id": 1,
+            "category": 1,
+            "name": "Event",
+            "description": "Fireworks intended for a large scale fireworks display perhaps for a concert or event"
+        },
+        {
+        	"id": 1,
+            "category": 2,
+            "name": "Discounted",
+            "description": "Fireworks intended for a large scale fireworks display perhaps for a concert or event"
+        },
+        {
+        	"id": 2,
+            "category": 3,
+            "name": "Personal",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+        	"id": 2,
+            "category": 4,
+            "name": "Family",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+        	"id": 2,
+            "category": 5,
+            "name": "Other",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
+        }
+    ]
+}
