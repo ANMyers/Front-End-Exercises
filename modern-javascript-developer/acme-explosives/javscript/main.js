@@ -22,7 +22,8 @@ function loadCategories() {
 					$("#fill-me").append(putToHtml);
 				}
 			}
-		resolve();
+		console.log("Loaded Categories");
+		setTimeout(function(){ resolve(); }, 2500);
 		}
 	})
 
@@ -42,7 +43,8 @@ let loadTypes = () => {
 					$("#type-fill").append(printInCat);
 				}
 			}
-		resolve();
+		console.log("Loaded Types");
+		setTimeout(function(){ resolve(); }, 2500);
 		}
 	})
 
@@ -71,7 +73,8 @@ let loadProducts = () => {
 					}
 				}
 			}
-		resolve();
+		console.log("Loaded Products");
+		setTimeout(function(){ resolve(); }, 2500);
 		}
 	})
 }
