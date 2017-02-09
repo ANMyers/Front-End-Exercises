@@ -5,7 +5,7 @@ let filter = {};
 filter.filterAvailableSongs = function() {
 	var songDivs = $(".song-div");
 	var checkedCBs = $('input[name="Genre"]:checked');
-	var invisDivs = $('div.song-div.invisible2');
+	var invisDivs = $('div.song-div.invisible');
 	var visDiv = $('div.song-div.visible');
 	if (checkedCBs.length === 0 && invisDivs.length === 0) {
 		$("#warning").html('Oops! Please Check A Genre.');
