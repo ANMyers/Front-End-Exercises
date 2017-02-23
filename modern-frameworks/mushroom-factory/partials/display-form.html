@@ -1,0 +1,9 @@
+<div ng-repeat="mushroom in mushrooms | filter: {name: filterText, edible: lethality}">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-xs-2"><h5>{{mushroom.name}}</h5></div>
+      <div class="col-xs-8">{{mushroom.description}}</div>
+      <div class="col-xs-2">Edible: {{mushroom.edible}}</div>
+    </div>
+  </div>
+</div>
