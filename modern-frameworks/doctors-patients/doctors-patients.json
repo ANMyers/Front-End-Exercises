@@ -1,0 +1,39 @@
+{
+    "doctors": [
+        {"killigrew": {
+            "first_name": "Johan",
+            "last_name": "Killigrew",
+            "speciality": "Pediatrics"
+        }},
+        {"billy": {
+            "first_name": "Bob",
+            "last_name": "Billy",
+            "speciality": "Orthopedics"
+        }},
+        {"potato": {
+            "first_name": "Sweet",
+            "last_name": "Potato",
+            "speciality": "Sweetoncology"
+        }}
+    ],
+    "patients": [
+        {
+            "first_name": "Margot",
+            "last_name": "Svenson",
+            "ailment": "Arthritis",
+            "doctor_id": "killigrew"
+        },
+        {
+            "first_name": "Bob",
+            "last_name": "Johnson",
+            "ailment": "Exhaustion",
+            "doctor_id": "billy"
+        },
+        {
+            "first_name": "Stephan",
+            "last_name": "Harris",
+            "ailment": "Chocolate",
+            "doctor_id": "potato"
+        }
+    ]
+}

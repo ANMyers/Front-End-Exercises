@@ -1,0 +1,11 @@
+<div>
+	<h3 class="text-center">Doctor List</h3>
+</div>
+<div ng-repeat="each in doctors | filter: {fullName: searchText.search}">
+	<ul class="list-group">
+	    <li class="list-group-item"><strong>First Name: </strong> {{each.firstName}}</li>
+	    <li class="list-group-item"><strong>Last Name: </strong> {{each.lastName}}</li>
+	    <li class="list-group-item"><strong>Speciality: </strong> {{each.speciality}}</li>
+	    <li class="list-group-item"><a href="#!/doctor/{{each.lastName}}"><strong>See this Doctor's Patients</strong></a></li>
+	</ul>
+</div>
