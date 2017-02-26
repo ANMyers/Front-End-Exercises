@@ -1,0 +1,9 @@
+<div ng-repeat="guide in guides">
+	<div class="panel panel-default">
+		<div class="panel-body">
+  		<div class="col-xs-8"><h5>{{guide.title}}</h5></div>
+  		<div class="col-xs-2">{{guide.type}}</div>
+  		<div class="col-xs-2">{{guide.price | currency:"$"}}</div>
+		</div>
+	</div>
+</div>
